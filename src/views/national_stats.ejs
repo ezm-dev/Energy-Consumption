@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/scripts/script.js" defer></script>
+    <title>National Stats</title>
+</head>
+
+<body>
+    <!-- Nav menu -->
+   <header>
+    <!-- logo -->
+    <h1>Energy Project</h1>
+    
+    <!-- Checkbox for toggling Menu -->
+    <input type="checkbox"  id="menu-toggle"> 
+    <label for="menu-toggle" class="burger-menu">
+        <span>&#9776;</span>
+    </label>
+<!-- Navigation -->
+<nav>
+<a href="/views/location_list.html">Locations</a>
+<a href="/views/leaderboard.html">Leaderboard</a>
+<a href="/nationalstats/list">National Stats</a>
+</nav>
+</header>
+
+<section class="main">
+    <h2>National Status</h2>
+  
+        <h4>National usage by source:</h4>
+        <% let totalWind = 0.0
+           let totalSolar = 0.0
+           let totalCoal = 0.0
+           let totalGas = 0.0 
+           let total =0.0
+         for(const item of items){
+            totalWind += item.windConsumption
+            totalSolar += item.solarConsumption
+            totalCoal += item.coalConsumption
+            totalGas +=item.gasConsumption
+         }
+         total = totalWind + totalSolar + totalCoal+ totalGas
+        %>
+        <section class="energy-bar"><label for="wind">Wind:</label> <meter value="<%= totalWind/total %>" id="wind-meter"></meter></section>
+        <section class="energy-bar"><label for="solar">Solar:</label> <meter value="<%= totalSolar/total %>" id="solar-meter"></meter></section>
+        <section class="energy-bar"><label for="gas">Gas:</label> <meter value="<%= totalGas/total %>" id="gas-meter"></meter></section>
+        <section class="energy-bar"><label for="coal">Coal : </label><meter value="<%= totalCoal/total %>" id="coal-meter"></meter></section>
+    
+    
+        <h4>National consumed by sources:<%= total %> WHs/day </h4>
+        
+        <section class="energy-value"><label for="wind">Wind: </label><span id="wind"><%= totalWind %> WHs/day.</span></section>
+        <section class="energy-value"><label for="solar">Solar: </label><span id="solar"><%= totalSolar %> WHs/day.</span></section>
+        <section class="energy-value"><label for="gas">Gas: </label> <span id="gas"><%= totalGas %> WHs/day.</span></section>
+        <section class="energy-value"><label for="coal">Coal: </label><span id="coal"><%= totalCoal %> WHs/day.</span></section>
+            
+      
+</section>  
+</body>
+</html>

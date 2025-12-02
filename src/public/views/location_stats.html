@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module" src="/scripts/locationStatsController.mjs" defer></script>
+    <script src="/scripts/script.js" defer></script>
+    <title>Location Stats</title>
+
+</head>
+
+<body>
+    <!-- Nav menu -->
+    <header>
+        <!-- logo -->
+        <h1>Energy Project</h1>
+
+        <!-- Checkbox for toggling Menu -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="burger-menu">
+            <span>&#9776;</span>
+        </label>
+        <!-- Navigation -->
+        <nav>
+            <a href="/views/location_list.html">Locations</a>
+            <a href="/views/leaderboard.html">Leaderboard</a>
+            <a href="/nationalstats/list">National Stats</a>
+        </nav>
+    </header>
+
+
+
+    <section class="main">
+        <h2>Location Stats</h2>
+        <section class="edit-buttons">
+
+            <input type="button" value="Post" id="post" class="list-btn">
+            <input type="button" value="Leaderboard" id="leaderboard" class="list-btn">
+        </section>
+
+
+        <h3 id="location-name">Location Status</h3>
+        <h4>Energy Sources: </h4>
+        <section id="first">
+
+        </section>
+
+
+        <h4 id="title"> </h4>
+        <section id="second">
+
+        </section>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module" src="/scripts/LocationEditController.mjs" defer></script>
+    <script src="/scripts/script.js" defer></script>
+    <title>Locations Edit</title>
+</head>
+
+<body>
+    <!-- Nav menu -->
+    <header>
+        <!-- logo -->
+        <h1>Energy Project</h1>
+
+        <!-- Checkbox for toggling Menu -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="burger-menu">
+            <span>&#9776;</span>
+        </label>
+        <!-- Navigation -->
+        <nav>
+            <a href="/views/location_list.html">Locations</a>
+            <a href="/views/leaderboard.html">Leaderboard</a>
+            <a href="/nationalstats/list">National Stats</a>
+        </nav>
+    </header>
+
+    <section class="main">
+        <h2>Edit Location</h2>
+        <!-- buttons -->
+        <section class="edit-buttons">
+            <input type="button" value="Back" id="back-button" class="list-btn">
+            <input type="button" value="Save" id="save-location" class="list-btn">
+        </section>
+
+        <!-- Location Details -->
+        <section class="form-section">
+            <article class="group">
+                <label for="location">Name: [letters and - only! e.g.,'Home', 'Location-office']</label>
+                <input type="text" name="location" id="location-name">
+            </article>
+
+            <article class="group">
+                <label for="state">State: </label>
+                <select name="state" id="location-state">
+                    <option value="Queensland">Queensland</option>
+                    <option value="Victoria">Victoria</option>
+                    <option value="New South Wales">New South Wales</option>
+                    <option value="Western Australia">Western Australia</option>
+                    <option value="South Australia">South Australia</option>
+                    <option value="Australian Capital Territory">Australian Capital Territory</option>
+                    <option value="Northern Territory">Northern Territory</option>
+                    <option value="Tasmania">Tasmania</option>
+                </select>
+            </article>
+        </section>
+
+
+        <!-- Manging Appliances -->
+        <section class="form-section">
+            <!-- <section id="appliances-interface"> -->
+
+            <article class="group">
+                <label for="devices">Appliances:</label>
+                <select id="devices" name="devices">
+                    <!-- from database -->
+                    <!-- <option value="computer">Computer</option>-->
+                </select>
+            </article>
+
+            <article class="group">
+                <article class="half-width">
+                    <label for="hours">Hours/Day(1-24):</label>
+                    <input type="text" id="hours" value="1">
+                </article>
+                <article class="half-width">
+                    <label for="quantity">Quantity (1-100) :</label>
+                    <input type="text"" id="quantity" value="1" >
+
+                </article>
+            </article>
+
+            <article class="group">
+                <input type="button" value=" Add" id="add-button" class="list-btn">
+            </article>
+        </section>
+
+
+
+        <!-- //Appliance Adding list -->
+                    <section id="list-area">
+                        <!-- <article>
+           <span>Quantity </span>
+           <span>Name </span> for
+           <span>hours </span> hrs
+           <input type="button" value="X">
+        </article>
+        <article>
+           <span>Quantity </span>
+           <span>Name </span> for
+           <span>hours </span> hrs
+           <input type="button" value="X">
+        </article> -->
+
+                    </section>
+        </section>
+</body>
+
+</html>

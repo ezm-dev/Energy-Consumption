@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module" src="/scripts/locationListController.mjs" defer></script>
+    <script src="/scripts/script.js" defer></script>
+    <title>Locations List</title>
+</head>
+
+<body>
+    <!-- Nav menu -->
+    <header>
+        <!-- logo -->
+        <h1>Energy Project</h1>
+
+        <!-- Checkbox for toggling Menu -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="burger-menu">
+            <span>&#9776;</span>
+        </label>
+        <!-- Navigation -->
+        <nav>
+            <a href="/views/location_list.html">Locations</a>
+            <a href="/views/leaderboard.html">Leaderboard</a>
+            <a href="/nationalstats/list">National Stats</a>
+        </nav>
+    </header>
+
+
+
+    <section class="main">
+        <h2>Locations</h2>
+        <label for="search" id="search-msg">Type here to search locations using letters and - only!</label>
+        <input type="text" id="search" placeholder="(e.g.,'Home', 'Location-office', 'office' ...etc. )">
+        <article id="location-list">
+            <!-- Generated-code -->
+
+
+        </article>
+        <article id="create-location">
+            <input type="button" value="New Location" id="create-location-btn">
+        </article>
+    </section>
+
+
+</body>
+
+</html>

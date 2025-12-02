@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module" src="/scripts/leaderboardController.mjs" defer></script>
+    <script src="/scripts/script.js" defer></script>
+    <title>Leaderboard</title>
+</head>
+
+<body>
+    <!-- Nav menu -->
+    <header>
+        <!-- logo -->
+        <h1>Energy Project</h1>
+
+        <!-- Checkbox for toggling Menu -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="burger-menu">
+            <span>&#9776;</span>
+        </label>
+        <!-- Navigation -->
+        <nav>
+            <a href="/views/location_list.html">Locations</a>
+            <a href="/views/leaderboard.html">Leaderboard</a>
+            <a href="/nationalstats/list">National Stats</a>
+        </nav>
+    </header>
+
+    <section class="main leaderboard">
+
+        <h2> Leaderboard</h2>
+
+        <label for="leaderboard-sort">Sorting by:</label>
+        <select name="" id="leaderboard-sort">
+            <option value="highest solar">Highest Solar</option>
+            <option value="highest wind">Highest Wind</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Wind </th>
+                    <th>Solar </th>
+                    <th>Gas </th>
+                    <th>Coal </th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody id="list">
+
+
+
+            </tbody>
+        </table>
+
+    </section>
+</body>
+
+</html>

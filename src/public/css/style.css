@@ -1,0 +1,404 @@
+ body {
+   margin: 0;
+   padding: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   box-sizing: border-box;
+ }
+
+
+ /* h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+} */
+
+ header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #000000;
+   padding: 10px 20px;
+   color: #ffffff;
+ }
+
+ header h1 {
+   margin: 0;
+ }
+
+ nav {
+   display: flex;
+ }
+
+ nav a {
+   color: #f8f4f4;
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: bold;
+   padding: 10px;
+   margin: 0 5px
+ }
+
+ nav a:hover {
+   background-color: #0a959f;
+   border-radius: 5px;
+ }
+
+ /* Hide checkbox */
+ input[type="checkbox"] {
+   display: none;
+ }
+
+ /* Hide burger Menu */
+ .burger-menu {
+   display: none;
+   font-size: 30px;
+   cursor: pointer;
+ }
+
+ /* Responsive for Mobile View */
+ @media (max-width:768px) {
+
+   /* show burger menu */
+   .burger-menu {
+     display: block;
+   }
+
+   /* Change navigation menu & hide untill click */
+   nav {
+     display: none;
+     flex-direction: column;
+     position: absolute;
+     top: 60px;
+     left: 0;
+     width: 100%;
+     background-color: #000000;
+   }
+
+   /* show the menu when click */
+   input[type="checkbox"]:checked~nav {
+     display: flex;
+   }
+
+   /* style navigation */
+   nav a {
+     text-align: center;
+     padding: 15px;
+   }
+
+ }
+
+ /* -----------------content list ----------------- */
+ /* Main */
+ .main {
+   max-width: 400px;
+   margin: 50px auto;
+   padding: 20px;
+   border: 1px solid #808080;
+   box-shadow: 5px 5px 10px gray;
+   border-radius: 10px;
+ }
+
+ #search {
+   margin-bottom: 20px;
+   width: 97%;
+   padding: 5px;
+   border: 1px solid #808080;
+   height: 1.5em;
+ }
+
+ #location-list {
+   display: flex;
+   flex-direction: column;
+   gap: 10px
+ }
+
+ .location-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   border: 1px solid #808080;
+   border-radius: 5px;
+   /* margin: 2px 0px; */
+ }
+
+ .location-info h2 {
+   margin: 0;
+   font-size: 1.3em;
+ }
+
+ .location-info p {
+   margin: 3px 0;
+   color: #555;
+ }
+
+ .location-buttons {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   width: 30%;
+
+
+ }
+
+ .list-btn {
+   font-size: 1em;
+   padding: 5px 10px;
+   margin: 2px 0;
+   border-radius: 5px;
+   cursor: pointer;
+
+
+ }
+
+ .list-btn:hover {
+   background-color: lightcyan;
+   border-radius: 8px;
+ }
+
+ #create-location-btn {
+   width: 97%;
+   padding: 10px 10px;
+   margin: 10px auto;
+   margin-left: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1em;
+
+ }
+
+ #create-location-btn:hover {
+   background-color: lightcyan;
+ }
+
+ @media (max-width: 250px) {
+   .location-item {
+     flex-direction: column;
+     align-items: flex-start;
+   }
+
+   .location-buttons {
+     flex-direction: row;
+   }
+
+   /* .list-btn {
+      margin: 5px;
+  } */
+ }
+
+ /* -----------------content edit----------------- */
+ .edit-buttons {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+ }
+
+ .form-section {
+   margin-top: 20px;
+ }
+
+ article.group {
+   /* background-color: #0a959f;
+border: #000000 1px solid; */
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 10px;
+ }
+
+ article.group label {
+
+   width: 100%;
+   margin-bottom: 5px;
+   font-size: 14px;
+ }
+
+ article.group input,
+ article.group select {
+   width: 100%;
+   padding: 5px;
+   font-size: 14px;
+   /* border: 1px solid #808080; */
+   border-radius: 5px;
+ }
+
+ article.group .half-width {
+   width: 40%
+ }
+
+ /* hours-quantity */
+ article.group #quantity {
+   width: 40%
+ }
+
+ article.group #hours {
+   width: 40%
+ }
+
+ /* #add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 80%;
+  margin-top: 20px;
+} */
+
+ #list-area {
+   margin-top: 20px;
+   /* border-top: 1px solid #808080; */
+   padding-top: 10px;
+ }
+
+ .list-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   margin-bottom: 10px;
+   background: #f9f9f9;
+ }
+
+ /* .item-details{
+
+} */
+
+ /* delete button */
+ .item-button {
+   color: red;
+   padding: 5px 10px;
+   cursor: pointer;
+   border-radius: 5px;
+
+ }
+
+ .item-button:hover {
+   background-color: lightcyan;
+ }
+
+ @media (max-width: 410px) {
+   .edit-buttons {
+     flex-direction: column;
+     gap: 10px;
+   }
+
+   article.group .half-width {
+     width: 100%;
+   }
+
+
+ }
+
+ /* -------------------Content Stats--------------- */
+
+ #first,
+ #second {
+   margin: 5px 0px;
+   /* background-color: aqua; */
+ }
+
+ /*  Energy bar section */
+ .energy-bar {
+   display: flex;
+   margin-bottom: 10px;
+   /* justify-content: space-between; */
+ }
+
+ /* meter label */
+ .energy-bar label,
+ .energy-value label {
+   width: 20%;
+   font-size: 16px;
+   font-weight: bold;
+   margin-bottom: 3px;
+   margin-right: 5px;
+
+
+ }
+
+ /* meter */
+ meter {
+   width: 75%;
+   border: 1px solid #808080;
+   border-radius: 5px;
+ }
+
+ /* Energy value section */
+ .energy-value {
+   display: flex;
+   margin-bottom: 10px;
+ }
+
+ .energy-value span {
+   font-size: 16px;
+   margin-bottom: 3px;
+   /* background-color: aqua;*/
+ }
+
+ /* --------------National Stats------------ */
+ /* The same like Stats */
+
+ /*------------------ Leader board------------------- */
+ .leaderboard label {
+   font-weight: bold;
+   display: block;
+   margin-bottom: 10px;
+   /* background-color: #0a959f; */
+ }
+
+ .leaderboard select {
+   width: 100%;
+   padding: 5px;
+   font-size: 16px;
+   /* border: 1px solid #808080; */
+   margin-bottom: 20px;
+ }
+
+ .leaderboard table {
+   width: 100%;
+   border-collapse: collapse;
+ }
+
+ .delete-btn {
+   color: red;
+   cursor: pointer;
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   font-size: 14px;
+ }
+
+ .delete-btn:hover {
+   background-color: lightcyan;
+ }
+
+ .leaderboard th,
+ .leaderboard td {
+   padding: 10px;
+   /* text-align: center; */
+   font-size: 15px;
+ }
+
+ .leaderboard th {
+   background-color: #d9d2d2;
+ }
+
+
+ .btn-disabled {
+   background-color: #d9d2d2;
+   cursor: not-allowed
+ }
+
+ .btn-disabled:hover {
+   background-color: #d9d2d2;
+
+ }
+
+ @media (max-width: 400px) {
+   .leaderboard {
+     min-width: 400px;
+   }
+ }
