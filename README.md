@@ -1,7 +1,7 @@
 # Energy-Consumption
 -Appliances energy consumption for different locations (Home, office), states leaderboard and national stats. 
-# Tools: HTML, CSS, JS, Node.js(Express), MVC(Model-View-Controller) architecture.
-
+# Tools:
+-HTML, CSS, JS, Node.js(Express), MVC(Model-View-Controller) architecture.
 <img width="968" height="1556" alt="1-locations" src="https://github.com/user-attachments/assets/03dfa758-5400-4973-851c-49747edd0852" />
 <img width="772" height="1556" alt="2-edit location" src="https://github.com/user-attachments/assets/0344f92e-3e6f-401f-9995-04a08afd004c" />
 <img width="772" height="1556" alt="3-location stats" src="https://github.com/user-attachments/assets/14d4d732-24e1-46c0-96ea-f5ab7f0ad762" />
